@@ -1,0 +1,1 @@
+SELECT ISNULL(NULL, 'World') AS [Output]

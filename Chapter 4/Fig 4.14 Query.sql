@@ -1,0 +1,1 @@
+SELECT ISNULL('Hello', 'World') AS [Output] 
