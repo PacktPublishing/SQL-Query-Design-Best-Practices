@@ -1,0 +1,1 @@
+SELECT ROUND(102.55268, 1) AS Number 

@@ -1,0 +1,1 @@
+SELECT CAST(102.55268 AS numeric(10,2)) AS [number]
