@@ -1,0 +1,13 @@
+WITH baseSales as (
+SELECT Year(Orderdate) as OrderYear, Month(Orderdate) as OrderMonth, SUM( ol.Quantity  * ol.UnitPrice) as OrderTotal FROM sales.orders o
+INNER JOIN sales.orderlines ol on o.orderid = ol.orderid
+GROUP BY Year(OrderDate), Month(OrderDate)),
+
+PrevSales as (SELECT OrderYear, OrderMonth, OrderTotal, LAG(OrderTotal, 12) OVER (ORDER BY OrderYear, OrderMonth) As PreviousYearsOrder
+FROM baseSales)
+
+SELECT OrderYear, OrderMonth, OrderTotal as TotalOrders, PreviousYearsOrder,
+FORMAT((OrderTotal - PreviousYearsOrder)/PreviousYearsOrder, 'P') as YOY_Change
+FROM PrevSales
+WHERE PreviousYearsOrder is not null
+ORDER BY OrderYear, OrderMonth

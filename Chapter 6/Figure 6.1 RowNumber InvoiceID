@@ -1,0 +1,11 @@
+SELECT ROW_NUMBER() OVER (ORDER BY InvoiceID) as RowNumber 
+
+  ,[InvoiceID] 
+
+  ,[CustomerID] 
+
+  FROM [Sales].[Invoices] 
+
+  WHERE Year(InvoiceDate) = 2016 
+
+  ORDER BY InvoiceID 
