@@ -1,6 +1,7 @@
---------------------------------------------------------------
+-----------------------------------------------------------
 -- Get Total Purchase Orders by Supplier and Delivery Method
---------------------------------------------------------------
+-----------------------------------------------------------
+
 USE [WideWorldImporters-Standard]
 GO
 
@@ -13,9 +14,10 @@ GROUP BY
 	[SupplierID];
 
 
---------------------------------------------------------------
+-----------------------------------------------------------
 -- Using PIVOT operator, produce pivot table with Suppliers 
---------------------------------------------------------------
+-----------------------------------------------------------
+
 USE [WideWorldImporters-Standard]
 GO
 
@@ -39,10 +41,10 @@ PIVOT
 ) AS PvtTbl;
 
 
-
---------------------------------------------------------------
+-----------------------------------------------------------
 -- Complex PIVOT operator, map Supplier name to Supplier Master
---------------------------------------------------------------
+-----------------------------------------------------------
+
 USE [WideWorldImporters-Standard]
 GO
 
@@ -80,9 +82,10 @@ PIVOT
 ) AS PvtTbl;
 
 
---------------------------------------------------------------
+-----------------------------------------------------------
 -- Dynamic column names in a PIVOT operation
---------------------------------------------------------------
+-----------------------------------------------------------
+
 USE [WideWorldImporters-Standard]
 GO
 
@@ -131,9 +134,10 @@ SET @sql =
 EXECUTE sp_executesql @sql;
 
 
---------------------------------------------------------------
+-----------------------------------------------------------
 -- Create sample table for UNPIVOT operator testing 
---------------------------------------------------------------
+-----------------------------------------------------------
+
 --DROP TABLE pvtSupplierPurchaseOrder;
 
 -- Create the table and insert values as portrayed in the previous example.  
@@ -155,9 +159,9 @@ GO
 SELECT * FROM [pvtSupplierPurchaseOrder]
 
 
---------------------------------------------------------------
+-----------------------------------------------------------
 -- Using UNPIVOT, produce Suppliers rows from column values
---------------------------------------------------------------
+-----------------------------------------------------------
 
 SELECT TotalPurchaseOrders, Suppliers, PurchaseOrder
 FROM   
@@ -183,9 +187,10 @@ UNPIVOT
 GO  
 
 
---------------------------------------------------------------
+-----------------------------------------------------------
 -- Create a new table for Hierarchy data example
---------------------------------------------------------------
+-----------------------------------------------------------
+
 -- DROP TABLE Sales.EmployeeOrganization;
 
 CREATE TABLE Sales.EmployeeOrganization
@@ -198,9 +203,11 @@ CREATE TABLE Sales.EmployeeOrganization
 ) ;  
 GO
 
---------------------------------------------------------------
+
+-----------------------------------------------------------
 -- Add John has Manager in the organization
---------------------------------------------------------------
+-----------------------------------------------------------
+
 INSERT Sales.EmployeeOrganization (EmpNode, EmpID, EmpName, EmpTitle)  
 VALUES (hierarchyid::GetRoot(), 0, 'John', 'Manager') ;  
 GO
@@ -209,9 +216,11 @@ SELECT EmpNode, EmpNode.ToString() AS Text_EmpNode, EmpLevel, EmpID, EmpName, Em
 FROM Sales.EmployeeOrganization;
 GO
 
---------------------------------------------------------------
+
+-----------------------------------------------------------
 -- Adding subordinate nodes under root node - John
---------------------------------------------------------------
+-----------------------------------------------------------
+
 DECLARE @vEmpNode hierarchyid, @mx hierarchyid;
 
 SELECT @vEmpNode = EmpNode FROM Sales.EmployeeOrganization WHERE EmpID = '0';
@@ -228,11 +237,15 @@ SELECT @mx = max(EmpNode) FROM Sales.EmployeeOrganization WHERE EmpNode.GetAnces
 INSERT Sales.EmployeeOrganization (EmpNode, EmpID, EmpName, EmpTitle)  
       VALUES(@vEmpNode.GetDescendant(@mx, NULL), '24', 'Kim', 'Assistant Manager');
 
+SELECT EmpNode, EmpNode.ToString() AS Text_EmpNode, EmpLevel, EmpID, EmpName, EmpTitle   
+FROM Sales.EmployeeOrganization;
 GO
 
---------------------------------------------------------------
+
+-----------------------------------------------------------
 -- Adding subordinate nodes under root node - Jim
---------------------------------------------------------------
+-----------------------------------------------------------
+
 DECLARE @vEmpNode hierarchyid, @mx hierarchyid;
 
 SELECT @vEmpNode = EmpNode FROM Sales.EmployeeOrganization WHERE EmpID = '17';
