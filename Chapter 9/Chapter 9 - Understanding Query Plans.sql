@@ -47,4 +47,12 @@ SET SHOWPLAN_XML OFF;
 
 GO 
 
-  -- Query 3: To Display Estimated Execution Plan in XML format 
+  -- Query 4: Example query to diagnose performance issue
+
+SELECT  
+
+      [CityName] 
+
+  FROM [WideWorldImporters]. [Application].[Cities] 
+
+  WHERE CityName='Abbeville' 
