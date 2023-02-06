@@ -2,7 +2,7 @@
 -- Get Total Purchase Orders by Supplier and Delivery Method
 -----------------------------------------------------------
 
-USE [WideWorldImporters-Standard]
+USE [WideWorldImporters]
 GO
 
 SELECT 
@@ -18,7 +18,7 @@ GROUP BY
 -- Using PIVOT operator, produce pivot table with Suppliers 
 -----------------------------------------------------------
 
-USE [WideWorldImporters-Standard]
+USE [WideWorldImporters]
 GO
 
 SELECT 
@@ -45,7 +45,7 @@ PIVOT
 -- Complex PIVOT operator, map Supplier name to Supplier Master
 -----------------------------------------------------------
 
-USE [WideWorldImporters-Standard]
+USE [WideWorldImporters]
 GO
 
 SELECT 
@@ -86,7 +86,7 @@ PIVOT
 -- Dynamic column names in a PIVOT operation
 -----------------------------------------------------------
 
-USE [WideWorldImporters-Standard]
+USE [WideWorldImporters]
 GO
 
 DECLARE 
@@ -104,6 +104,8 @@ FROM
 
 -- remove first comma from the list
 SET @pvtColumns = SUBSTRING(@pvtColumns, 3, LEN(@pvtColumns));
+
+PRINT @pvtColumns
 
 -- dynamic PIVOT query
 SET @sql = 
@@ -261,5 +263,8 @@ SELECT @mx = max(EmpNode) FROM Sales.EmployeeOrganization WHERE EmpNode.GetAnces
 
 INSERT Sales.EmployeeOrganization (EmpNode, EmpID, EmpName, EmpTitle)  
       VALUES(@vEmpNode.GetDescendant(@mx, NULL), '25', 'Frank', 'Team Member');
+GO
 
+SELECT EmpNode, EmpNode.ToString() AS Text_EmpNode, EmpLevel, EmpID, EmpName, EmpTitle   
+FROM Sales.EmployeeOrganization;
 GO
