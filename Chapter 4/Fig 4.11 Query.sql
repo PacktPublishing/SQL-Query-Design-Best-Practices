@@ -1,0 +1,1 @@
+SELECT COALESCE(NULL, NULL, 2, 3, 'A', NULL, NULL) AS [Output]

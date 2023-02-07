@@ -1,0 +1,15 @@
+  SELECT CustomerID, 
+
+  InvoiceID, 
+
+  InvoiceDate, 
+
+  LAG(InvoiceDate, 1) OVER (PARTITION BY CustomerID ORDER BY  InvoiceDate) as PriorInvoiceOrderDate, 
+
+  DateDiff(d, LAG(InvoiceDate, 1) OVER (PARTITION BY CustomerID ORDER BY InvoiceDate), InvoiceDate) as DaysSinceLastOrder 
+
+  FROM [Sales].[Invoices] 
+
+  WHERE Year(InvoiceDate) = 2016 
+
+  ORDER BY CustomerID, InvoiceDate 
