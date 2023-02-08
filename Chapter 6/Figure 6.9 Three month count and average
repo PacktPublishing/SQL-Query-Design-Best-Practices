@@ -1,9 +1,0 @@
-SELECT YEAR(InvoiceDate) as InvoiceYear, Month(InvoiceDate) as InvoiceMonth,
-COUNT(*) as InvoiceCount,
-SUM(COUNT(*)) OVER (ORDER BY YEAR(InvoiceDate), Month(InvoiceDate)
-ROWS BETWEEN 2 PRECEDING and CURRENT ROW) as ThreeMonthCount,
-AVG(COUNT(*)) OVER (ORDER BY YEAR(InvoiceDate), Month(InvoiceDate)
-ROWS BETWEEN 2 PRECEDING and CURRENT ROW) as ThreeMonthAverage
-FROM Sales.Invoices
-GROUP BY YEAR(InvoiceDate), Month(InvoiceDate)
-ORDER BY InvoiceYear, InvoiceMonth
