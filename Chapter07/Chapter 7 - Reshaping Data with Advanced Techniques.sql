@@ -140,7 +140,8 @@ EXECUTE sp_executesql @sql;
 -- Create sample table for UNPIVOT operator testing 
 -----------------------------------------------------------
 
---DROP TABLE pvtSupplierPurchaseOrder;
+DROP TABLE IF EXISTS [dbo].[pvtSupplierPurchaseOrder];
+GO
 
 -- Create the table and insert values as portrayed in the previous example.  
 CREATE TABLE pvtSupplierPurchaseOrder (
