@@ -127,7 +127,7 @@ WITH (
 GO
 
 
-SELECT TOP 1 * FROM SuppliersExternalTbl;
+SELECT TOP 10 * FROM SuppliersExternalTbl;
 
 
 
