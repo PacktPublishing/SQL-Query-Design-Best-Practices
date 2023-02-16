@@ -1,0 +1,7 @@
+SELECT CustomerID, InvoiceID, InvoiceDate, 
+FIRST_VALUE(InvoiceDate) OVER (PARTITION BY CustomerID ORDER BY InvoiceID) As FirstOrderDate,
+LAST_VALUE(InvoiceDate) OVER (PARTITION BY CustomerID ORDER BY InvoiceID) as LastOrderDateWRONG,
+LAST_VALUE(InvoiceDate) OVER (PARTITION BY CustomerID ORDER BY InvoiceID ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING) As LastOrderDate
+FROM Sales.Invoices
+WHERE Year(InvoiceDate) = 2016
+Order by CustomerID, InvoiceID

@@ -1,4 +1,4 @@
-IF EXISTS(SELECT 1 FROM sys.views WHERE name =' V_CustomerOrderHistory')
+IF EXISTS(SELECT 1 FROM sys.views WHERE name ='V_CustomerOrderHistory')
 DROP VIEW dbo.V_CustomerOrderHistory;
 GO
 CREATE VIEW dbo.V_CustomerOrderHistory AS (

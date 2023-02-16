@@ -1,0 +1,1 @@
+SELECT FLOOR(102.55268) AS Number 

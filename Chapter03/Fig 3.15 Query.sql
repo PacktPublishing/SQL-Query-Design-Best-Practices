@@ -1,0 +1,1 @@
+SELECT '$'+ CONVERT(nvarchar(10), 102.55268) AS Number 
