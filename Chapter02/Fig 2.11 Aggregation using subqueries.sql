@@ -1,7 +1,7 @@
 SELECT YEAR([Invoice Date Key]) as [Invoice Year]
       ,MONTH([Invoice Date Key]) as [Invoice Month]
 	  ,COUNT([Customer Key]) as [# of Customers with Orders]
-	  ,d.[# of Customers] as [# of Customers Recevied Orders]
+	  ,d.[# of Customers] as [# of Customers Received Orders]
 FROM [WideWorldImportersDW].[Fact].[Sale],
     (SELECT YEAR([Delivery Date Key]) as [Delivery Year]
 	       ,MONTH([Delivery Date Key]) as [Deliver Month]
