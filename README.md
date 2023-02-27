@@ -1,6 +1,6 @@
 # SQL Query Design Patterns and Best Practices	
 
-<a href="https://www.amazon.in/Query-Design-Patterns-Best-Practices-ebook/dp/B0BWRD7HQ7/ref=sr_1_3?crid=721FT536W1GL&keywords=SQL+Query+Design+Patterns+and+Best+Practices&qid=1677486001&sprefix=sql+query+design+patterns+and+best+practices+%2Caps%2C494&sr=8-3"><img src="https://m.media-amazon.com/images/I/413ivVqCWFL.jpg" alt="SQL Query Design Patterns and Best Practices	" height="256px" align="right"></a>
+<a href="https://www.amazon.in/Query-Design-Patterns-Best-Practices-ebook/dp/B0BWRD7HQ7/ref=sr_1_3?crid=721FT536W1GL&keywords=SQL+Query+Design+Patterns+and+Best+Practices&qid=1677486001&sprefix=sql+query+design+patterns+and+best+practices+%2Caps%2C494&sr=8-3"><img src="https://m.media-amazon.com/images/I/413ivVqCWFL.jpg" alt="SQL Query Design Patterns and Best Practices" height="256px" align="right"></a>
 
 This is the code repository for [SQL Query Design Patterns and Best Practices] (https://www.amazon.in/Query-Design-Patterns-Best-Practices-ebook/dp/B0BWRD7HQ7/ref=sr_1_3?crid=721FT536W1GL&keywords=SQL+Query+Design+Patterns+and+Best+Practices&qid=1677486001&sprefix=sql+query+design+patterns+and+best+practices+%2Caps%2C494&sr=8-3), published by Packt.
 
