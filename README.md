@@ -1,10 +1,10 @@
 # SQL Query Design Patterns and Best Practices	
 
-<a href="<Packtpub book link>?utm_source=github&utm_medium=repository&utm_campaign=<13-P ISBN>"><img src="https://static.packt-cdn.com/products/<13-P ISBN>/cover/smaller" alt="<Book Name>" height="256px" align="right"></a>
+<a href="https://www.amazon.in/Query-Design-Patterns-Best-Practices-ebook/dp/B0BWRD7HQ7/ref=sr_1_3?crid=721FT536W1GL&keywords=SQL+Query+Design+Patterns+and+Best+Practices&qid=1677486001&sprefix=sql+query+design+patterns+and+best+practices+%2Caps%2C494&sr=8-3"><img src="https://m.media-amazon.com/images/I/413ivVqCWFL.jpg" alt="SQL Query Design Patterns and Best Practices" height="256px" align="right"></a>
 
-This is the code repository for [SQL Query Design Patterns and Best Practices] (<Packtpub book link>?utm_source=github&utm_medium=repository&utm_campaign=<13-P ISBN>), published by Packt.
+This is the code repository for [SQL Query Design Patterns and Best Practices] (https://www.amazon.in/Query-Design-Patterns-Best-Practices-ebook/dp/B0BWRD7HQ7/ref=sr_1_3?crid=721FT536W1GL&keywords=SQL+Query+Design+Patterns+and+Best+Practices&qid=1677486001&sprefix=sql+query+design+patterns+and+best+practices+%2Caps%2C494&sr=8-3), published by Packt.
 
-**A practical guide to writing readable and maintainable SQL queries using its design patterns	**
+**A practical guide to writing readable and maintainable SQL queries using its design patterns**
 
 ## What is this book about?
 SQL has been the de facto standard when interacting with databases for decades and shows no signs of going away. Through the years, report developers or data wranglers have had to learn SQL on the fly to meet the business needs, so if you are someone who needs to write queries, SQL Query Design and Pattern Best Practices is for you.
@@ -54,9 +54,9 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 
 
 ### Related products <Other books you may enjoy>
-* SQL Server Query Tuning and Optimization [[Packt]](<Book link on Packtpub>) [[Amazon]](https://www.amazon.com/dp/<10P-ISBN>)
+* SQL Server Query Tuning and Optimization [[Packt]](<Book link on Packtpub>) [[Amazon]](https://www.amazon.com/dp/1803242620)
 
-* Business Intelligence with Databricks SQL [[Packt]](<Book link on Packtpub>) [[Amazon]](https://www.amazon.com/dp/<10P-ISBN>)
+* Business Intelligence with Databricks SQL [[Packt]](<Book link on Packtpub>) [[Amazon]](https://www.amazon.com/dp/1803235330)
 
 ## Get to Know the Author(s)
 **Steve Hughes* is a Senior Director, Data & Analytics, at 3Cloud. In this role, he focuses on growing the teams' skills and capabilities to deliver data projects on Azure. He has been working with technology for over 20 years with much of that time spent on creating business intelligence solutions and helping customers implement leading BI and cloud solutions. He is passionate about using data effectively and helping customers understand that data is valuable and profitable. Steve has recently been diagnosed with ALS but continues to work and share with others what he has learned. Steve is also the founder of Data on Wheels where he blogs with one of his daughters on topics around data, analytics, and work enablement.
