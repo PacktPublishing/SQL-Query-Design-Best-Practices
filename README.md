@@ -1,3 +1,11 @@
+
+### [Packt Conference : Put Generative AI to work on Oct 11-13 (Virtual)](https://packt.link/JGIEY)
+
+<b><p align='center'>[![Packt Conference](https://hub.packtpub.com/wp-content/uploads/2023/08/put-generative-ai-to-work-packt.png)](https://packt.link/JGIEY)</p></b> 
+3 Days, 20+ AI Experts, 25+ Workshops and Power Talks 
+
+Code: <b>USD75OFF</b>
+
 # SQL Query Design Patterns and Best Practices	
 
 <a href="https://www.amazon.in/Query-Design-Patterns-Best-Practices-ebook/dp/B0BWRD7HQ7/ref=sr_1_3?keywords=SQL+Query+Design+Patterns+and+Best+Practices&qid=1677489214&sr=8-3"><img src="https://m.media-amazon.com/images/I/413ivVqCWFL.jpg" alt="SQL Query Design Patterns and Best Practices" height="256px" align="right"></a>
